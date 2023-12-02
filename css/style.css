@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+/* Estilos de pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Estilos del body con la imagen */
+body {
+    width: 100%;
+    min-width: 100hv;
+    background: url(../img/5252323.jpg); 
+}
+
+/* Estilos para cada seccion */
+section {
+    color: white;
+    width: 80%;
+    margin: 100px auto;
+    border:  20px solid white;
+    background: rgba(202, 115, 115, 0.625);
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para titulos*/
+h2 {
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+}
+
+/* Estilos para la izquierda y derecha */
+.left, .rigth {
+    width: 50%;
+    text-align: center;
+    border: 1px solid rgb(204, 0, 255);
+    padding: 15px;
+}
+
+/* Botones */
+button {
+    padding: 8px 30px;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    color: white;
+    font-size: 25px;
+    border-radius: 0 20px 0 20px;
+    border: 1px solid white;
+    transition: 0.5s;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px rgb(117, 86, 86);
+    
+}
+
+button:hover {
+    border-radius: 20px 0 20px 0;
+    color: black;
+    cursor: pointer;
+    background-color: orange
+}
+
+/* Estilos generales para el cuadrado */
+#figura {
+    width: 200px;
+    height: 200px;
+    background: rgb(169, 92, 241);
+    border: 2px solid rgb(0, 0, 0);
+    margin: 40px auto;
+    box-shadow: 0 0 20px 5px rgb(51, 47, 47);
+    transition: 1s;
+}
+
+/* Circulo */
+#figura.Circulo {
+    border-radius: 100px;
+    background: orange;
+    border: 2px solid black;
+    transform: rotate(-360deg);
+}
+
+/* Rectangulo */
+#figura.Rectangulo {
+    width: 500px;
+}
+
+/* Rombo */
+#figura.Rombo {
+    rotate: 45deg;
+} 
+
+/*Imagen*/
+#figura.Imagen {
+    background-image: url(../img/pinguino.jpg);
+    background-size: cover;
+} 
+
+/* Gif */
+#figura.Gif {
+    background: url(https://pa1.aminoapps.com/6388/28395d390e6dd9985076daf4f172d68e8067792e_hq.gif);
+    background-size: cover;
+    border: none;
+    box-shadow: none;
+}
+
+/* Figura de un triangulo */
+#figura.Triangulo {
+    height: 200px;
+    width: 200px;
+    border-right: 100px solid transparent;
+    border-top: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid #d54ef0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Figura de hoja */
+#figura.Hoja {
+    border-radius: 0px 150px 0px 150px;
+    background-color: green;
+}
+
+/* Figura pac man */
+#figura.Pac {
+    background-color: transparent;
+    border: solid yellow 50px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    box-sizing: border-box;
+    border-color: yellow transparent yellow yellow;
+}  
+
+/* Figura luna */
+#figura.Luna {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 30px 10px 0 #fff;
+    background-color: transparent;
+    border: none;
+}
+
+/* Figura huevo */
+#figura.Huevo {
+    width: 126px;
+    height: 180px;
+    background-color: white;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+/* Figura del trapecio */
+#figura.Trapecio {
+    width: 250px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid aqua;
+    background-color: transparent;
+    box-shadow: none;
+} 
+
+/* Mover hacia arriba */
+#figura.moveTop {
+    transform: translateY(-100px);
+}
+
+/* Mover hacia la izquierda */
+#figura.moveleft {
+    transform: translate(-100px);
+}
+
+/* Mover hacia abajo */
+#figura.movebottom {
+    transform: translateY(100px);
+}
+
+/* Mover hacia la derecha */
+#figura.moveRigth {
+    transform: translate(100px);
+}
+
+/* Cambiar imagen */
+
+#body.CambiarImagen {
+    background-image: url(https://i.pinimg.com/originals/40/5b/01/405b01dca75926d68e9cfaac5f7c4e50.jpg);
+    background-size: cover;
+}
+
+/* Cambiar de color */
+
+.left.active,
+.rigth.active {
+    border: solid 2px violet;
+} 
+
+/* Panel lateral */
+
+.panel-lateral {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    background: #fff;
+    text-align: center;
+    padding: 60px 30px;
+    height: 100vh;
+    transition: 1s;
+}
+
+.panel-lateral.active {
+    left: 0;
+}
+
+.panel-lateral h2 {
+    color: #000;
+}
+
+.panel-lateral a {
+    background-color: violet;
+    color: aqua;
+    padding: 8px 20px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: .6s;
+}
+
+.panel-lateral a:hover {
+    transform: scale(1.07);
+}
+
+.panel-lateral a.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+/* Panel superior */
+
+.panel-superior {
+    position: absolute;
+    z-index: 9;
+    top: -100%; 
+    left: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 60px 30px;
+    height: 50vh;
+    transition: 1s; 
+}
+
+.panel-superior.active {
+    top: 0; 
+}
+
+.panel-superior h2 {
+    color: #000; 
+}
+
+.panel-superior a {
+    background-color: violet;
+    color: aqua;
+    padding: 8px 20px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: .6s;
+}
+
+.panel-superior a:hover {
+    transform: scale(1.07);
+}
+
+.panel-superior a.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+/* Estrella */
+.estrella {
+    background-attachment: fixed;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: scale(1);
+}
